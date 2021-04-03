@@ -23,6 +23,10 @@ include_once 'parts/header.php';
         </div>
         <div class="work">Work
 
+        <?php
+         include 'worktabs.php';
+         ?>
+
         </div>
     </div>
 
@@ -64,9 +68,6 @@ include_once 'parts/header.php';
     </div>
 </div>
 
-<?php
-include_once 'loginorsignup.php';
-?>
 
 </div> <!--closes body-->
 

@@ -1,0 +1,127 @@
+.form-error {
+    color: red;
+}
+.form-success{
+    color: green;
+}
+.input-error {
+    box-shadow: 0 0 5px  rgba(255, 0, 102, 1);
+}
+.work-tab {
+    background: linear-gradient(to right, chartreuse, white, rgba(255, 0, 102, 1));
+    
+}
+@media (min-width:768px) {
+    .worktabs {
+        display: flex;
+        
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .tab-handle {
+        min-height: 300px;
+    }
+}
+
+.worktabs .tab {
+    flex: 1;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 100px;
+    background: linear-gradient(to top right, rgba(255,255,255, 0.75), rgba(255,255,255,0.25));
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+.tab-head {
+    margin: 5px;
+    padding: 10px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background: linear-gradient(to top right, rgba(255,255,0,0.75), rgba(255,255,0,0.75));
+}
+.tab-handle {
+    margin: 5px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background: linear-gradient(to top right, rgba(255,255,0,0.75), rgba(255,255,0,0.75));
+}
+@media (max-width:768px) {
+    .tab-handle {
+        min-width: 300px;
+    }
+}
+.something {
+    background-color: rgb(255, 255, 0);
+}
+
+button {
+    border: 0.5px outset;
+    border-color: white;
+    outline: none;
+    min-width: 100px;
+    border-radius: 10px !important;
+    background:linear-gradient(to top right, chartreuse, white);
+    box-shadow: inset 0 0 0 0 rgb(255, 255, 0);
+    transition: ease-out 0.3s;
+    padding: 10px;
+    margin: 3px;
+}
+
+button:hover {
+    outline: none;
+    box-shadow: inset 0 0 0 100px rgb(255, 255, 0), inset 30px 30px 30px 30px white;
+    color: purple;
+    font-weight: bolder;
+    border: 0.3px inset;
+    border-color: white;
+    cursor: pointer;
+}
+/*For Buttons inside link tags*/
+a button {
+    border: 0.5px outset;
+    border-color: white;
+    outline: none;
+    min-width: 100px;
+    border-radius: 10px !important;
+    background:linear-gradient(to top right, chartreuse, white);
+    box-shadow: inset 0 0 0 0 rgb(255, 255, 0);
+    transition: ease-out 0.3s;
+    padding: 10px;
+    margin: 3px;
+}
+button:hover {
+    outline: none;
+    box-shadow: inset 0 0 0 100px rgb(255, 255, 0), inset 30px 30px 30px 30px white;
+    color: purple;
+    font-weight: bolder;
+    border: 0.3px inset;
+    border-color: white;
+    cursor: pointer;
+}
+/*end of button styles*/
+.successful {
+    box-shadow: 0 0 5px  chartreuse;
+}
+.theJobCentre form input {
+    text-align: left;
+}
+.hide {
+    display: none;
+}
+span {
+    font-weight: bold;
+}
+#otherJob {
+    display: none;
+}
+.thebuttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.success {
+    color:green;
+}

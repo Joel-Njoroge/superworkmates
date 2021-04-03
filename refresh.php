@@ -26,6 +26,39 @@ $sec = "3";
         else {
             echo 'I do not know';
         }
+
+        $random = random_bytes(5);
+
+        echo '<br>';
+        echo $random;
+        $randomhex = bin2hex($random);
+        echo '<br>';
+        echo $randomhex;
+        $randomint = random_int(400,500);
+        echo '<br>';
+        echo $randomint;
+
     ?>
+        <button><a href="myChatBox.php">Live Chat</a></button>
     </body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("kay").click(function(){
+    $("#div1").load("demo_test.txt");
+  });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button id="kay">Get External Content</button>
+
+</body>
 </html>

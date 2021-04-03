@@ -32,23 +32,22 @@
       <label for="password">Password:</label> </br>
       <input type="password" name="password" class="weka2">
       </br>
-      </br>
-        <input type="submit" name="submit" value="Log In">
-      </br>
+      <br>
+        <button type="submit" name="submit"> Sign In </button>
     </form>
 <!--Forgot Password-->
-      <br>
+      
       <?php
       if (isset($_GET['success'])) {
         if ($_GET['success'] == "password=reset=successful") {
-          echo '<p class="signupsucess">Your password has been reset successfully. <br>Now log in ith your new password!</p>';
+          echo '<br> <p class="signupsucess">Your password has been reset successfully. <br>Now log in ith your new password!</p> <br>';
         }
       }
       ?>
       <br>
-      <a href="resetpassword.php">I forgot my password!</a>
+      <div class="forgot-password"> <a href="resetpassword.php"> I forgot my password!</a> </div>
 <!--Sign Up-->
   <h4>Sign Up</h4>
-  <a href="signup.php"> <button>Create Account</button> </a>
+  <a href="signup.php"> <button> Create Account </button> </a> 
 </div>
 

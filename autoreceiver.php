@@ -25,6 +25,19 @@ setInterval(function(){
 
 <?php
 require 'connections/dbconnect.php';
+
+    echo time();
+    echo '<br> ';
+
+/*check how many users are online*/
+$ask = "SELECT * FROM ifislive";
+$result = mysqli_query($connect,$ask);
+$rowCount = mysqli_num_rows($result);
+
+echo '<br> ';
+echo $rowCount .' users in the system';
+echo '<br>';
+
 /*check if user is online*/
 $ifisOnline = "SELECT * FROM ifislive WHERE receiverid=? AND senderid=?";
 
@@ -57,7 +70,7 @@ $ifisOnline = "SELECT * FROM ifislive WHERE receiverid=? AND senderid=?";
                     exit();
                 }
                 elseif ($onlineStatusChecker >= 7) {
-                    echo 'Admin is Offline <br> Admin was Last Active on ' .$lastSeen;
+                    echo 'Admin is Offline <br> Admin was Last Active Here on ' .$lastSeen;
                     exit();
                 }
                 
@@ -71,13 +84,7 @@ $ifisOnline = "SELECT * FROM ifislive WHERE receiverid=? AND senderid=?";
         }
             
 
-/*check how many users are online*/
-    $ask = "SELECT * FROM ifislive";
-    $result = mysqli_query($connect,$ask);
-    $rowCount = mysqli_num_rows($result);
 
-    echo '<br> ';
-    echo $rowCount .' users in the system';
     /*echo '<br> ';
     echo date('U');
     echo '<br> ';
@@ -91,6 +98,8 @@ $ifisOnline = "SELECT * FROM ifislive WHERE receiverid=? AND senderid=?";
   //echo'<br>';
 /*$timezone = date_default_timezone_get();
 echo "The current server timezone is: " . $timezone;*/
+mysqli_stmt_close ($stmt);
+mysqli_close ($connect);
 ?>
 
 </body>

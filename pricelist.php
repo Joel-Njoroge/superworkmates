@@ -3,7 +3,7 @@
   
 <head>      
 <link rel="stylesheet" href="css/priceliststyles.css">
-<title>Price List | Anything Anywhere </title>
+<title>Price List | Price of Anything Anywhere </title>
 
 </head>
 <body>
