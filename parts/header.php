@@ -6,23 +6,23 @@ session_start();
   
   <head>
       
-        <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-        <link rel="manifest" href="icons/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
+      <link rel="apple-touch-icon" sizes="57x57" href="icons/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="icons/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="icons/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="icons/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="icons/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="icons/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="icons/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="icons/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="icons/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+      <link rel="manifest" href="icons/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
               
             <meta name="viewport" content="width=device-width,initial-scale=1.0">
             <meta charset="utf-8">
@@ -124,21 +124,21 @@ if (isset ($_SESSION ['username'])) {
                       <div class="phone-nav-item"> <a href="equipments.php"> <div class = "phone-menu-item"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">construction</i> Equipment </div> </a> </div>
                       <div class="phone-nav-item"> <a href="trends.php"> <div class="phone-menu-item"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">timeline</i> Trends & Tech </div> </a> </div>
                       <div class="phone-nav-item"> <a href="about.php"> <div class="phone-menu-item"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">contact_page</i> About Us </div> </a> </div>
-                      <div class="phone-nav-item"> <?php if (isset ($_SESSION ['username'])) {echo '<a href="logout.php"> <div class="phone-menu-item"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">account_circle</i> Log Out </div> </a>';}
-                      else {echo '<a href="#"> <div class="phone-menu-item" onclick="login()"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">account_circle</i> My Account </div> </a>';}?> </div>
+                      <div class="phone-nav-item"> <?php if (isset ($_SESSION ['username'])) {echo '<a href="logout.php"> <div class="phone-menu-item"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">account_circle</i> Sign Out </div> </a>';}
+                      else {echo '<a href="#"> <div class="phone-menu-item" onclick="login()"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">account_circle</i> Sign In </div> </a>';}?> </div>
                 </div>
             </div>
-      </div>
+      </div> <!-- end of class phone-menu -->
 
       <div class="phone-user-image-title">
         <div class="icon-and-name">
-          
-          <a href="<?php if (isset ($_SESSION ['username'])) {echo 'office.php';} else {echo '#';}?>">
-          <div class="user-title">
-              <?php if (isset ($_SESSION ['username'])) {echo $_SESSION ['username'];}
-              else {echo '<div class="check-in-modal" onclick="login()">Check In</div>';}?>
-          </div>
-          </a>
+
+          <div class="phone-user-title-side">
+              <div class="user-title">
+                  <?php if (isset ($_SESSION ['username'])) {echo $_SESSION ['username'];}
+                  else {echo '<div class="check-in-modal" onclick="login()">Check In</div>';}?>
+              </div>
+          </div> <!-- end of class phone-user-title-side -->
           
           <div class="image-icon">
             <?php
@@ -153,8 +153,23 @@ if (isset ($_SESSION ['username'])) {
                 ?>
           </div> <!--end of class image-icon-->
 
-        </div> <!--end of class phone-user-image-title-->
-      </div> <!--end of class icon-and-name-->
+        </div> <!--end of class icon-and-name-->
+              <div class="phone-user-options-dropdown"> <!-- dropdown for log out and profile-->
+                  <?php if (isset($_SESSION['username'])){ echo '
+                    <div id="phone-acc-options">
+                                <div class="acc-options-item"> <a href="myOffice.php"> Profile </a> </div>
+                                <div class="mid-line"></div>
+                                <div class="acc-options-item"> <a href="logout.php"> Sign Out </a> </div>
+                    </div>
+                  ';} else {echo '
+                    <div id="phone-acc-options">
+                            <div class="acc-options-item" onclick="login()"> Sign In </div>
+                            <div class="mid-line"></div>
+                            <div class="acc-options-item" onclick="register()"> Create Account </div>
+                    </div>
+                  ';}?>
+                </div> <!-- end of class phone-user-options-dropdown -->
+      </div> <!--end of class phone-user-image-title-->
 
 </div> <!-- end of class phone-nav-bar -->
 
@@ -173,20 +188,20 @@ if (isset ($_SESSION ['username'])) {
     <div class="navbar-in"> <a href="trends.php"> <div class = "sehemu1"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">timeline</i> Trends $ Tech </div> </a> </div>
     <?php if (isset($_SESSION['username'])){ echo '
     <div id="my-account"> <div class="navbar-in"> <a href="#"> <div class="sehemu1"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">account_circle</i> '.$Hi. ' ' .$usersName .' </div> </a> </div>
-    <div id="acc-options">
-                <div class="acc-options-item"> <a href="myOffice.php"> Profile </a> </div>
-                <div class="mid-line"></div>
-                <div class="acc-options-item"> <a href="logout.php"> Sign Out </a> </div>
-                </div> <!-- end of class my-account -->
-    </div>
+          <div id="acc-options">
+                      <div class="acc-options-item"> <a href="myOffice.php"> Profile </a> </div>
+                      <div class="mid-line"></div>
+                      <div class="acc-options-item"> <a href="logout.php"> Sign Out </a> </div>
+          </div>
+    </div>  <!-- end of class my-account -->
     ';} else echo '
     <div id="my-account"> <div class="navbar-in"> <a href="#"> <div class="sehemu1"> <i class="material-icons" style="font-size:20px; color:rgba(255, 0, 102, 1);">account_circle</i> My Account </div> </a> </div>
-    <div id="acc-options">
-                <div class="acc-options-item" onclick="login()"> Sign In </div>
-                <div class="mid-line"></div>
-                <div class="acc-options-item" onclick="register()"> Create Account </div>
-                </div> <!-- end of class my-account -->
-    </div>
+          <div id="acc-options">
+                      <div class="acc-options-item" onclick="login()"> Sign In </div>
+                      <div class="mid-line"></div>
+                      <div class="acc-options-item" onclick="register()"> Create Account </div>
+          </div>
+    </div> <!-- end of class my-account -->
     ';?>
     <!-- <div class="navbar-in"> <a href="#" data-toggle="dropdown" >
                               <i class="fa fa-user" ></i> My Account

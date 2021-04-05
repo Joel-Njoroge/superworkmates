@@ -1,5 +1,5 @@
 <div class="bb">
-  <h4>Log In</h4>
+  <h4>Sign In</h4>
   
   <div class="errortab">
       <?php

@@ -117,29 +117,45 @@ display: none;
   padding: 0px;
   }
 
-@media(min-width:768px){
-  .phone-menu {
-    display: none;
-    }
-  .phone-user-image-title {
-    display: none;
-  }
-}
-@media(max-width:768px){
-.phone-menu {
-    display: block;
+/*phone nav bar styles*/
+
+  .phone-nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     z-index: 100;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky !important;
+    top: 0px;
+    padding: 10px;
+  }
+
+@media(min-width:768px){
+    .phone-menu {
+      display: none;
+    }
+    .phone-user-image-title {
+      display: none;
+    }
+}
+
+@media(max-width:768px){
+  .phone-menu {
+    display: block;
+    flex: 2;
+    padding: 2.5vmin;
     color: rgba(255, 0, 102, 1);
     font-size: 24px;
-    box-sizing: border-box;
     text-align: left;
-    align-items: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    
-  }
-.phone-user-image-title {
-  display: block;
 }
+  .phone-user-image-title {
+    display: block;
+    flex: 3;
+    position: relative;
+  }
+  
 }
 
 .phone-menu:hover .phone-nav-label {
@@ -147,44 +163,67 @@ display: none;
   font-size: bold;
 }
 
-/*phone nav bar styles*/
-.phone-nav-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  z-index: 100;
-  background-color: black;
-  position: -webkit-sticky;
-  position: sticky !important;
-  top: 0px;
-}
-
-.phone-nav-bar .phone-menu {
-  flex: 2;
-  padding: 5vmin;
-}
-
-.phone-nav-bar .phone-user-image-title {
-  flex: 3;
-  box-sizing: border-box;
-  text-align: right;
-  align-items: center;
-  vertical-align: middle;
-  padding: 5vmin;
-}
-
 .icon-and-name {
+  text-align: right;
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: flex-end;
+  padding: 2.5vmin;
+  flex-wrap: wrap;
+}
+
+/*prof pic and show area */
+.prof-icon-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.icon-and-name a {
+  text-decoration: none;
+}
+
+.icon-and-name:hover a .user-title{
+  font-size: bold;
+  color: chartreuse;
 }
 
 .icon-and-name .user-title {
-  padding-right: 2vmin;
+  padding-right: 10px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 24px;
   color: rgba(255, 0, 102, 1);
 }
+
+/*Right side Phone menu hover */
+.phone-user-options-dropdown {
+ display: none;
+  
+}
+
+.phone-user-image-title:hover .phone-user-options-dropdown {
+  display: block;
+  position: absolute;
+  height: auto;
+  z-index: 120;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 3px !important;
+  z-index: 120;
+  right: 0px;
+  color: rgba(255, 0, 102, 1);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  background: white;
+  min-width: 140px;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 
 .phone-menu-nav {
   position: relative;
@@ -197,12 +236,14 @@ display: none;
   box-sizing: border-box;
   background-color:chartreuse;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  z-index: 100;
+  z-index: 120;
+  display: flex;
+  align-items: center;
 }
 
 .phone-menu-nav .phone-menu-nav-items .phone-nav-item {
   border-bottom: 1px solid rgba(255, 0, 102, 1);
-  text-align: center;
+  text-align: left;
   color: black;
 }
 
@@ -224,22 +265,7 @@ display: none;
   padding: 3px;
 }
 
-/*prof pic and show area */
-.prof-icon-image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.icon-and-name a {
-  text-decoration: none;
-}
-
-.icon-and-name:hover a .user-title{
-  font-size: bold;
-  color: chartreuse;
-}
-
+/* main navbar - bigscreen */
 @media(min-width:768px) {
   .navbar {
     display :flex;
@@ -302,8 +328,8 @@ display: none;
 
 #acc-options {
   display: none;
-  
-}
+  }
+
 
 #my-account:hover #acc-options {
   display: block;
@@ -311,7 +337,8 @@ display: none;
   height:auto;
   box-sizing: border-box;
   padding: 10px;
-  z-index: 200;
+  border-radius: 3px !important;
+  z-index: 120;
   color: rgba(255, 0, 102, 1);
   font-size: 18px;
   display: flex;
@@ -325,7 +352,7 @@ display: none;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#acc-options .acc-options-item {
+.acc-options-item {
   padding: 10px;
   box-sizing: border-box;
   min-width: inherit;
@@ -467,6 +494,8 @@ display: none;
 .bb .thelogin form .label {
   display: block;
 }
+
+/*profile picture*/
 
 .p-pic {
   padding: 10px;
@@ -752,14 +781,6 @@ hr {
   padding: 5px;
 }
 
-.button {
-  background-color: blueviolet;
-  color: white;
-  width: 240px;
-  height: 30px;
-  border-radius: 30px;
-  margin: 10px;
-}
 .profileimage img {
   width: 100%;
 }
